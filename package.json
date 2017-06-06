@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/bettyjobrotherton/typing_test#readme",
   "dependencies": {
+    "angular": "^1.6.4",
     "express": "^4.14.0"
   }
 }
