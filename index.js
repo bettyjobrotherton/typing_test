@@ -4,7 +4,7 @@ var server = express();
 
 var port = process.env.PORT || 8080;
 
-server.use(express.static(__dirname + '/public'));
+server.use(express.static(__dirname + '/client'));
 
 server.get('/', function(req, res){
   res.sendFile('client/index.html', {root: __dirname});

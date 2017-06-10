@@ -4,24 +4,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Timed Typing Test</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/client/main.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="/main.css">
 </head>
 <body ng-controller="mainController">
 
   <div class="header"></div>
 
-  <div class="side-bar">
-    <div class="screen-3"></div>
-  </div>
-
   <div class="main-view">
-    <div class="screen-1">
+    <div id="screen-1">
       <p>It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way. In short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.</p>
     </div>
     <!-- 119 words, 612 characters -->
-    <div class="screen-2">
-      <textarea ng-model='textArea' rows="5"></textarea>
+    <div id="screen-2">
+      <textarea ng-model='textArea'></textarea>
+    </div>
+  </div>
+
+  <div class="side-bar">
+    <div id="screen-3">
+      <p>Start typing to begin test.</p>
     </div>
   </div>
 
