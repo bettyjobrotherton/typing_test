@@ -16,7 +16,7 @@ body {
 }
 .side-bar {
     float: right;
-    margin: 0;
+    margin: 50 0 0;
     padding: 0;
     width: 25%;
     background-color: #f1f1f1;
@@ -30,7 +30,12 @@ body {
   background-color: #FF1234;
 }
 
-.header {}
+.header {
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+}
 
 /*.side-bar {
   display: flex;
@@ -40,7 +45,8 @@ body {
 }*/
 
 .main-view {
-  margin: 0;
+  margin: 50 0 0
+  /*margin: 0;*/
 }
 
 textarea {
