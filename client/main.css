@@ -43,6 +43,11 @@ body {}
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
+.inside-view {
+  display: block;
+  width: 75%;
+}
+
 .main-view {
   display: flex;
   margin: 50px 0 0 0;
