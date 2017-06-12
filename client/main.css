@@ -29,7 +29,7 @@ body {
 
 .side-bar {
     float: right;
-    margin: 50px 0 0;
+    margin: 50px 0 0 0;
     padding: 0;
     width: 25%;
     background-color: #f1f1f1;
@@ -39,7 +39,8 @@ body {
 }
 
 .main-view {
-  margin: 50px 0 0;
+  margin: 50px 0 0 0;
+  width: 75%;
 }
 
 textarea {
