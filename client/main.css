@@ -4,6 +4,7 @@ body {}
   border: 1px solid black;
   border-radius: 5px;
   margin: 10px;
+  padding: 10px;
   height: 30%;
   background-color: #1234FF;
   display: flex;
