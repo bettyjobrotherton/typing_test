@@ -12,12 +12,7 @@ function MainController($scope){
   $scope.numberOfWords = 0;
   var timerInterval;
 
-  function startTest(){ //Starts the timer and begins the word count when triggered
-       startTimer();
-       countWords();
-  }
-       
-  function startTimer(){ //Starts the timer until the word count reaches the same as the sample text
+  function startTest(){ //Starts the timer until the word count reaches the same as the sample text
        if(!timerInterval){
               timerInterval = setInterval(countUp, 1000);
        }
@@ -31,9 +26,11 @@ function MainController($scope){
               if(secondsValue === 59) {
                      seconds.text("00");
                      minutes.text(pad(minutesValue + 1));
+                     countWords();
               } else {
                      seconds.text(pad(secondsValue + 1));
                      minutes.text(pad(minutesValue));
+                     countWords();
               }
        } else {
               clearInterval(timerInterval);
@@ -42,5 +39,8 @@ function MainController($scope){
   }
   
   function countWords(){ //Counts the number of words in the text input box
+         var string = $scope.textArea;
+         var splitString = string.split(" ");
+         $scope.numberOfWords = splitString.length();
   }
 }
