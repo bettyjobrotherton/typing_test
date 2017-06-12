@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  display: block;
+  /*display: block;*/
   width: 100%;
   height: 50px;
   margin: 0;
