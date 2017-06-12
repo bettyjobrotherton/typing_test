@@ -35,6 +35,7 @@ function MainController($scope){
        } else {
               clearInterval(timerInterval);
               timerInterval = null;
+              calculateWPM();
        }
   }
   
@@ -42,5 +43,10 @@ function MainController($scope){
          var string = $scope.textArea;
          var splitString = string.split(" ");
          $scope.numberOfWords = splitString.length();
+  }
+       
+  function calculateWPM(){
+     var totalTime = (parseInt($scope.seconds.text())/60) + parseInt($scope.minutes.text());
+     $scope.wordsPerMin = $scope.numberOfWords/totalTime;
   }
 }
