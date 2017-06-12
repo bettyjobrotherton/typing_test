@@ -42,7 +42,7 @@ body {
   padding: 10px;
   height: 30%;
   background-color: #1234FF;
-  display: flex;
+  display: block;
   align-content: center;
   justify-content: left;
 }
@@ -59,6 +59,7 @@ body {
   margin: 10px;
   background-color: #FF1234;
   justify-content: center;
+  text-align: center;
 }
 
 textarea {
@@ -67,7 +68,9 @@ textarea {
   border-radius: 5px;
 }
 
-.emphasize {}
+.emphasize {
+  font-weight: 700;
+}
 
 #timer {
   height: 20px;
