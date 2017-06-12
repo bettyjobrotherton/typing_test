@@ -20,7 +20,7 @@ body {
     background-color: #f1f1f1;
     height: 63%; /* Full height */
     /*position: fixed;  Make it stick, even on scroll */
-    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    /*overflow: auto; Enable scrolling if the sidenav has too much content */
 }
 
 .inside-view {
@@ -60,6 +60,8 @@ body {
   background-color: #4CB853;
   justify-content: center;
   text-align: center;
+  border-radius: 5px;
+  height: 100%;
 }
 
 textarea {
