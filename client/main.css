@@ -5,6 +5,9 @@ body {
 #screen-1 {
   margin: 10px;
   background-color: #1234FF;
+  display: flex;
+  align-content: center;
+  justify-content: left;
 }
 
 #screen-2 {
@@ -41,6 +44,7 @@ body {
 }
 
 .main-view {
+  display: flex;
   margin: 50px 0 0 0;
   width: 75%;
 }
