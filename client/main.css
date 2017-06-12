@@ -2,7 +2,7 @@ body {}
 
 #screen-1 {
   margin: 10px;
-  /*width: 75%;*/
+  height: 30%;
   background-color: #1234FF;
   display: flex;
   align-content: center;
@@ -11,7 +11,7 @@ body {}
 
 #screen-2 {
   margin: 10px;
-  /*width: 75%;*/
+  height: 30%;
   background-color: #12FF34;
   display: flex;
   align-content: center;
@@ -38,7 +38,7 @@ body {}
     padding: 0;
     width: 25%;
     background-color: #f1f1f1;
-    height: 100%; /* Full height */
+    height: 63%; /* Full height */
     /*position: fixed;  Make it stick, even on scroll */
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
@@ -56,4 +56,6 @@ body {}
 }
 
 textarea {
+  width: 100%;
+  height: 100%;
 }
