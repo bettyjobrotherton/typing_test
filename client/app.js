@@ -30,8 +30,8 @@ function MainController($scope){
        
        if($scope.numberOfWords < 119){ //If the word count is less than 119, the timer continues
               if(secondsValue === 59) {
-                     $scope.seconds.text("00");
-                     $scope.minutes.text(pad(minutesValue + 1));
+                     $scope.seconds.toString("00");
+                     $scope.minutes.toString(pad(minutesValue + 1));
                      countWords();
               } else {                //Otherwise, the timer stops.
                      $scope.seconds.toString(pad(secondsValue + 1));
