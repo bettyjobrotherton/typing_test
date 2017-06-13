@@ -9,6 +9,8 @@ function MainController($scope){
   $scope.startTest = startTest;
   var timerInterval = null;
   $scope.showWPM = false;
+  $scope.seconds = '00';
+  $scope.minutes = '00';
        
   $scope.$watch(function($scope) { 
        return $scope.seconds; 
@@ -20,8 +22,6 @@ function MainController($scope){
 
   function startTest(){ //Starts the timer 
        if(!timerInterval){
-              $scope.seconds = '00';
-              $scope.minutes = '00';
               $scope.numberOfWords = 0;
               timerInterval = setInterval(countUp, 1000);
        } else {
@@ -69,7 +69,8 @@ function MainController($scope){
        
   function calculateWPM(){ //Calculates typing speen in words per a minute
      var totalTime = (parseInt($scope.seconds)/60) + parseInt($scope.minutes);
-     $scope.wordsPerMin = $scope.numberOfWords/totalTime;
+     var unfilteredWordsPerMin = $scope.numberOfWords/totalTime;
+     $scope.wordsPerMin = unfilteredWordsPerMin.toFixed(1);
      $scope.showWPM = true;
   }
 }
