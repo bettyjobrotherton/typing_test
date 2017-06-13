@@ -21,6 +21,7 @@ function MainController($scope){
        if(!timerInterval){
               $scope.seconds = '00';
               $scope.minutes = '00';
+              $scope.numberOfWords = 0;
               timerInterval = setInterval(countUp(), 1000);
        } else {
               return;
