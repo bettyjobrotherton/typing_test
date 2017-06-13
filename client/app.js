@@ -24,8 +24,8 @@ function MainController($scope){
   } 
   
   function countUp(){ //Continues timer until the word count reaches the same as the sample text
-       var secondsValue = parseInt($scope.seconds.text());
-       var minutesValue = parseInt($scope.minutes.text());
+       var secondsValue = parseInt($scope.seconds);
+       var minutesValue = parseInt($scope.minutes);
        countWords();
        
        if($scope.numberOfWords < 119){
