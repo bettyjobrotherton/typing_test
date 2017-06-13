@@ -21,7 +21,7 @@ function MainController($scope){
        if(!timerInterval){
               $scope.seconds = '00';
               $scope.minutes = '00';
-              timerInterval = setInterval(countUp, 1000);
+              timerInterval = setInterval(countUp(), 1000);
        } else {
               return;
        }
