@@ -69,7 +69,8 @@ function MainController($scope){
        
   function calculateWPM(){ //Calculates typing speen in words per a minute
      var totalTime = (parseInt($scope.seconds)/60) + parseInt($scope.minutes);
-     $scope.wordsPerMin = $scope.numberOfWords/totalTime;
+     var unfilteredWordsPerMin = $scope.numberOfWords/totalTime;
+     $scope.wordsPerMin = unfilteredWordsPerMin.toFixed(1);
      $scope.showWPM = true;
   }
 }
