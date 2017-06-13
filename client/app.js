@@ -20,6 +20,8 @@ function MainController($scope){
   function startTest(){ //Starts the timer 
        if(!timerInterval){
               timerInterval = setInterval(countUp, 1000);
+       } else {
+              return;
        }
   } 
   
