@@ -47,7 +47,7 @@ function MainController($scope){
   }
   
   function countWords(){ //Counts the number of words in the text input box
-         var string = $scope.textArea;
+         var string = $scope.textInput;
          var splitString = string.split(" ");
          $scope.numberOfWords = splitString.length();
   }
