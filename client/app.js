@@ -9,6 +9,8 @@ function MainController($scope){
   $scope.startTest = startTest;
   var timerInterval = null;
   $scope.showWPM = false;
+  $scope.seconds = '00';
+  $scope.minutes = '00';
        
   $scope.$watch(function($scope) { 
        return $scope.seconds; 
@@ -20,8 +22,6 @@ function MainController($scope){
 
   function startTest(){ //Starts the timer 
        if(!timerInterval){
-              $scope.seconds = '00';
-              $scope.minutes = '00';
               $scope.numberOfWords = 0;
               timerInterval = setInterval(countUp, 1000);
        } else {
