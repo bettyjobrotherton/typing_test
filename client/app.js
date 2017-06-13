@@ -9,7 +9,6 @@ function MainController($scope){
   $scope.startTest = startTest;
   $scope.seconds = '00';
   $scope.minutes = '00';
-  $scope.numberOfWords = 0;
   var timerInterval;
        
   $scope.$watch(function($scope) { 
