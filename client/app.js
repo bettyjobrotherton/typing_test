@@ -11,9 +11,9 @@ function MainController($scope){
        
   $scope.$watch(function($scope) { 
        return $scope.seconds; 
-  }, function($scope) {
-       $scope.seconds = $scope.seconds;
-       $scope.minutes = $scope.minutes;
+  }, function() {
+       $scope.seconds;
+       $scope.minutes;
        return;
   });
 
