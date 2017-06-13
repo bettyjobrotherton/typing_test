@@ -5,30 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Timed Typing Test</title>
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/client/main.css">
 </head>
-<body ng-controller="mainController">
+<body ng-controller="MainController">
 
   <div class="header">
     <h3>Timed Typing Test</h3>
   </div>
 
   <div class="main-view">
+  <div class="inside-view">
     <div id="screen-1">
+      <p class="emphasize">Sample Text:</p>
       <p>It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way. In short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.</p>
     </div>
     <!-- 119 words, 612 characters -->
     <div id="screen-2">
-      <textarea ng-model='textArea'></textarea>
+      <textarea ng-model='textInput' ng-keypress="startTest()"></textarea>
+    </div>
+     </div>
+    
+    <div class="side-bar">
+      <div id="screen-3">
+        <p class="emphasize">Start typing sample text to begin test.</p>
+        <div id="timer"> {{ minutes }}:{{ seconds }} </div>
+        <p ng-if="showWPM">Your typed {{ wordsPerMin | currency: 1 }} words per a minute!</p>
+      </div>
     </div>
   </div>
-
-  <div class="side-bar">
-    <div id="screen-3">
-      <p>Start typing to begin test.</p>
-      
-    </div>
-  </div>
+ 
+  <script src="/node_modules/angular/angular.js"></script>
+  <script src="/client/app.js"></script>
 
 </body>
 </html>
