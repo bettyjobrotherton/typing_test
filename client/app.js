@@ -9,13 +9,13 @@ function MainController($scope){
   $scope.startTest = startTest;
   var timerInterval;
        
-  $scope.$watch(function($scope) { 
-       return $scope.seconds; 
-  }, function($scope) {
-       $scope.seconds = $scope.seconds;
-       $scope.minutes = $scope.minutes;
-       return;
-  });
+  //$scope.$watch(function($scope) { 
+  //     return $scope.seconds; 
+ // }, function($scope) {
+ //      $scope.seconds = $scope.seconds;
+ //      $scope.minutes = $scope.minutes;
+ //      return;
+ // });
 
   function startTest(){ //Starts the timer 
        if(!timerInterval){
