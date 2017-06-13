@@ -7,7 +7,7 @@ MainController.$inject = ['$scope'];
 
 function MainController($scope){
   $scope.startTest = startTest;
-  var timerInterval;
+  var timerInterval = null;
        
   //$scope.$watch(function($scope) { 
   //     return $scope.seconds; 
