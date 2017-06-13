@@ -18,15 +18,16 @@ function MainController($scope){
     return $scope.seconds;
   });
 
-  function startTest(){ //Starts the timer until the word count reaches the same as the sample text
+  function startTest(){ //Starts the timer 
        if(!timerInterval){
               timerInterval = setInterval(countUp, 1000);
        }
   } 
   
-  function countUp(){
+  function countUp(){ //Continues timer until the word count reaches the same as the sample text
        var secondsValue = parseInt($scope.seconds.text());
        var minutesValue = parseInt($scope.minutes.text());
+       countWords();
        
        if($scope.numberOfWords < 119){
               if(secondsValue === 59) {
