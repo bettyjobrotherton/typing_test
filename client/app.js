@@ -7,8 +7,6 @@ MainController.$inject = ['$scope'];
 
 function MainController($scope){
   $scope.startTest = startTest;
-  $scope.seconds = '00';
-  $scope.minutes = '00';
   var timerInterval;
        
   $scope.$watch(function($scope) { 
@@ -21,6 +19,8 @@ function MainController($scope){
 
   function startTest(){ //Starts the timer 
        if(!timerInterval){
+              $scope.seconds = '00';
+              $scope.minutes = '00';
               timerInterval = setInterval(countUp, 1000);
        } else {
               return;
