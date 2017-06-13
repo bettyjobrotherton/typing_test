@@ -47,9 +47,8 @@ function MainController($scope){
   }
   
   function countWords(){ //Counts the number of words in the text input box
-         var string = $scope.textInput;
-         var splitString = string.split(" ");
-         $scope.numberOfWords = splitString.length();
+         var splitString = $scope.textInput.split(" ");
+         $scope.numberOfWords = splitString.length;
   }
        
   function calculateWPM(){ //Calculates typing speen in words per a minute
