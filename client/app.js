@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mainApp', [])
-       .crontroller('MainController', MainController);
+       .controller('MainController', MainController);
 
 MainController.$inject = ['$scope'];
 
