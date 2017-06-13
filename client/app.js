@@ -33,16 +33,16 @@ function MainController($scope){
        countWords(); 
        
        if($scope.numberOfWords < 119){ //If the word count is less than 119, the timer continues
-              if(secondsValue === 59) {
+              if(secondsValue == 59) {
                      $scope.seconds = "00";
                      $scope.minutes = pad(minutesValue + 1);
                      countWords();
-              } else {                //Otherwise, the timer stops.
+              } else {                
                      $scope.seconds = pad(secondsValue + 1);
                      $scope.minutes = pad(minutesValue);
                      countWords();
               }
-       } else {
+       } else {                        //Otherwise, the timer stops.
               clearInterval(timerInterval);
               timerInterval = null;
               calculateWPM();
