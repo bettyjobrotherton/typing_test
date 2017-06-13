@@ -45,7 +45,6 @@ function MainController($scope){
               }
        } else {                        //Otherwise, the timer stops.
               clearInterval(timerInterval);
-              timerInterval = null;
               calculateWPM();
        }
   }
