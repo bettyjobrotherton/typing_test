@@ -12,9 +12,11 @@ function MainController($scope){
   var timerInterval;
        
   $scope.$watch(function($scope) { 
-    return $scope.seconds; 
+       return $scope.seconds; 
   }, function($scope) {
-    return $scope.seconds = $scope.seconds;
+       $scope.seconds = $scope.seconds;
+       $scope.minutes = $scope.minutes;
+       return;
   });
 
   function startTest(){ //Starts the timer 
