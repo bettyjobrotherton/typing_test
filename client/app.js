@@ -11,6 +11,12 @@ function MainController($scope){
   $scope.minutes = '00';
   $scope.numberOfWords = 0;
   var timerInterval;
+       
+  $scope.$watch(function($scope) { 
+    return $scope.seconds; 
+  }, function() {
+    return $scope.seconds;
+  });
 
   function startTest(){ //Starts the timer until the word count reaches the same as the sample text
        if(!timerInterval){
@@ -45,7 +51,7 @@ function MainController($scope){
          $scope.numberOfWords = splitString.length();
   }
        
-  function calculateWPM(){
+  function calculateWPM(){ //Calculates typing speen in words per a minute
      var totalTime = (parseInt($scope.seconds.text())/60) + parseInt($scope.minutes.text());
      $scope.wordsPerMin = $scope.numberOfWords/totalTime;
   }
