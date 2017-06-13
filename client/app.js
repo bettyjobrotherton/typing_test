@@ -30,12 +30,12 @@ function MainController($scope){
        
        if($scope.numberOfWords < 119){
               if(secondsValue === 59) {
-                     seconds.text("00");
-                     minutes.text(pad(minutesValue + 1));
+                     $scope.seconds.text("00");
+                     $scope.minutes.text(pad(minutesValue + 1));
                      countWords();
               } else {
-                     seconds.text(pad(secondsValue + 1));
-                     minutes.text(pad(minutesValue));
+                     $scope.seconds.text(pad(secondsValue + 1));
+                     $scope.minutes.text(pad(minutesValue));
                      countWords();
               }
        } else {
