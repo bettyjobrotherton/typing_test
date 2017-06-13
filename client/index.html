@@ -29,6 +29,7 @@
       <div id="screen-3">
         <p class="emphasize">Start typing sample text to begin test.</p>
         <div id="timer"> {{ minutes }}:{{ seconds }} </div>
+        <p ng-if="showWPM">Your typed {{ wordsPerMinute }} words per a minute!</p>
       </div>
     </div>
   </div>
