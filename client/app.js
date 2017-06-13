@@ -34,8 +34,8 @@ function MainController($scope){
                      $scope.minutes.text(pad(minutesValue + 1));
                      countWords();
               } else {                //Otherwise, the timer stops.
-                     $scope.seconds.text(pad(secondsValue + 1));
-                     $scope.minutes.text(pad(minutesValue));
+                     $scope.seconds.toString(pad(secondsValue + 1));
+                     $scope.minutes.toString(pad(minutesValue));
                      countWords();
               }
        } else {
@@ -61,7 +61,7 @@ function MainController($scope){
   }
        
   function calculateWPM(){ //Calculates typing speen in words per a minute
-     var totalTime = (parseInt($scope.seconds.text())/60) + parseInt($scope.minutes.text());
+     var totalTime = (parseInt($scope.seconds)/60) + parseInt($scope.minutes);
      $scope.wordsPerMin = $scope.numberOfWords/totalTime;
   }
 }
