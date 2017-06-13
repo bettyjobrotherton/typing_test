@@ -8,6 +8,7 @@ MainController.$inject = ['$scope'];
 function MainController($scope){
   $scope.startTest = startTest;
   var timerInterval = null;
+  $scope.showWPM = false;
        
   $scope.$watch(function($scope) { 
        return $scope.seconds; 
@@ -69,5 +70,6 @@ function MainController($scope){
   function calculateWPM(){ //Calculates typing speen in words per a minute
      var totalTime = (parseInt($scope.seconds)/60) + parseInt($scope.minutes);
      $scope.wordsPerMin = $scope.numberOfWords/totalTime;
+     $scope.showWPM = true;
   }
 }
