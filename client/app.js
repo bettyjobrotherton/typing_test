@@ -13,8 +13,8 @@ function MainController($scope){
        
   $scope.$watch(function($scope) { 
     return $scope.seconds; 
-  }, function() {
-    return $scope.seconds;
+  }, function($scope) {
+    return $scope.seconds = $scope.seconds;
   });
 
   function startTest(){ //Starts the timer 
