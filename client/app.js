@@ -26,14 +26,14 @@ function MainController($scope){
   function countUp(){ //Continues timer until the word count reaches the same as the sample text
        var secondsValue = parseInt($scope.seconds);
        var minutesValue = parseInt($scope.minutes);
-       countWords();
+       countWords(); 
        
-       if($scope.numberOfWords < 119){
+       if($scope.numberOfWords < 119){ //If the word count is less than 119, the timer continues
               if(secondsValue === 59) {
                      $scope.seconds.text("00");
                      $scope.minutes.text(pad(minutesValue + 1));
                      countWords();
-              } else {
+              } else {                //Otherwise, the timer stops.
                      $scope.seconds.text(pad(secondsValue + 1));
                      $scope.minutes.text(pad(minutesValue));
                      countWords();
@@ -45,6 +45,16 @@ function MainController($scope){
        }
   }
   
+  function pad(num){ //Pads single digit numbers with a leading zero
+       if(num < 10){
+              //Returns the number with a leading zero
+              return "0" + num;
+       } else {
+              //Returns the original number
+              return num;
+       }
+  }
+       
   function countWords(){ //Counts the number of words in the text input box
          var splitString = $scope.textInput.split(" ");
          $scope.numberOfWords = splitString.length;
