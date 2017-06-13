@@ -34,12 +34,12 @@ function MainController($scope){
        
        if($scope.numberOfWords < 119){ //If the word count is less than 119, the timer continues
               if(secondsValue === 59) {
-                     $scope.seconds.toString("00");
-                     $scope.minutes.toString(pad(minutesValue + 1));
+                     $scope.seconds = "00";
+                     $scope.minutes = pad(minutesValue + 1);
                      countWords();
               } else {                //Otherwise, the timer stops.
-                     $scope.seconds.toString(pad(secondsValue + 1));
-                     $scope.minutes.toString(pad(minutesValue));
+                     $scope.seconds = pad(secondsValue + 1);
+                     $scope.minutes = pad(minutesValue);
                      countWords();
               }
        } else {
@@ -50,12 +50,13 @@ function MainController($scope){
   }
   
   function pad(num){ //Pads single digit numbers with a leading zero
+       var convertedNum = num.toString(); //Converts number to a string
        if(num < 10){
               //Returns the number with a leading zero
-              return "0" + num;
+              return "0" + convertedNum;
        } else {
               //Returns the original number
-              return num;
+              return convertedNum;
        }
   }
        
